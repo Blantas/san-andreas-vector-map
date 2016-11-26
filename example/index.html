@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" lang="en-US">
+<head>
+<meta content="text/html; charset=UTF-8;charset=utf-8" http-equiv="Content-Type">
+<title>San Andreas </title>
+
+<script type="text/javascript" src="jquery/jquery.js" ></script>
+<script type="text/javascript" src="jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script type="text/javascript" src="jvectormap/jquery-jvectormap-san_adreas.js"></script>
+
+<link rel="stylesheet" href="jvectormap/jquery-jvectormap.css" type="text/css" media="screen"/>
+
+<style>
+html {
+	height: 100%;
+}
+body 
+{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background: #fff;
+}
+</style>
+
+</head>
+<body>
+	<div id="zemelapio_blokas" style=" width: auto; height:100%; border: 1px solid rgba(0, 0, 0, 0.047);"></div>
+	<script>
+		$(function(){
+			$('#zemelapio_blokas').vectorMap(
+			{
+				map: 'map', 
+				backgroundColor: 'transparent',
+				series: 
+				{
+					regions: [{
+						values: 
+						{
+							TR: 'A',
+							BC: 'A',
+							LV: 'A',
+							RC: 'A',
+							LS: 'A',
+							FC: 'A',
+							WS: 'A',
+							SF: 'A'
+						},
+						scale: 
+						{
+							"A": "#888888"
+						}
+					}]
+				},
+				markers: 
+				[
+					{coords: [3496, 5312], name: 'Švyturys', style: {fill: 'yellow'}},
+					{coords: [5828, 5011], name: 'Groove Street', style: {fill: 'yellow'}}
+				],
+				zoomMax: 15,
+				zoomMin: 1,
+				zoomStep: 1.1,
+				focusOn: 
+				{
+					x: 0.5,
+					y: 0.5,
+					scale: 1.0
+				}
+			})
+		});
+	</script>
+</body>
+</head>
